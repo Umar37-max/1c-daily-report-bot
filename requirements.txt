@@ -1,0 +1,24 @@
+# ASCII only on purpose: old pip (23.x) on the server reads this file in the
+# system codepage (cp1252) and dies on Cyrillic with UnicodeDecodeError.
+
+# Google Sheets
+gspread==6.1.2
+google-auth==2.32.0
+
+# Telegram bot (bot.py) - job-queue extra is needed for the 06:30 schedule
+python-telegram-bot[job-queue]==22.8
+
+# Sheet screenshot: PDF export -> PyMuPDF (imported as fitz) -> PNG
+PyMuPDF==1.28.0
+Pillow==12.3.0
+
+requests==2.34.2
+python-dotenv==1.0.1
+
+# 1C: windows, clipboard, cursor-independent input
+pywinauto==0.6.8
+pywin32==312
+comtypes==1.4.16
+
+# reading .xlsx when the report is exported via Ctrl+S
+openpyxl==3.1.5
